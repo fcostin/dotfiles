@@ -1,0 +1,12 @@
+[user]
+	name = Reuben Fletcher-Costin
+	email = reuben.fletchercostin@gmail.com
+[core]
+	editor = vim
+[color]
+	ui = true
+[diff]
+	external = meld_for_git
+[pager]
+	difftool = cat
+	diff = cat

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=xmonad+GNOME
+Comment=xmonad. glee.
+TryExec=gnome-session
+Exec=gnome-session
+Type=XSession
