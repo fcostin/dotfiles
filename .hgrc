@@ -1,0 +1,58 @@
+[ui]
+username = Reuben Fletcher-Costin <reuben.fletcher-costin@biarri.com>
+merge = meld
+
+[trusted]
+# suggest to hg that it should kindly trust .hgrc files in the vmware share
+users = root
+groups = root
+
+[extensions]
+color=
+purge=
+# enable "hg view" graphical thing
+# (nb - this required `sudo apt-get install tk` to work)
+# it looks very much like gitk
+hgk=
+
+# mq: enables history editing stuff, incl. history rewriting tools such as `hg strip`
+mq=
+
+progress=
+rebase=
+# enable extdiff command
+hgext.extdiff=
+
+# another history editing tool for git refugees
+histedit=
+
+patchbomb=
+# adds "hg record" command, which is kind of like git add -p when committing.
+record=
+# similarly, crecord
+# mercurial crashed, complained about credord, i dont use it. hence disabled
+# crecord=~/.hgext/edgimar-crecord-55cf805769eb/crecord
+
+# lets us convert from other scms & rewrite history while copying
+convert=
+
+# graphical log
+graphlog=
+
+# enable git style ^ suffixes for specifying revision heritage (and more)
+parentrevspec=
+
+# please page your log output you silly program
+pager=
+
+# hopefully this works faster than histedit fold
+# collapse=~/.hgext/peerst-hgcollapse-b42d3b57df3a/hgext/collapse.py
+
+[extdiff]
+cmd.gdiff = diff
+opts.gdiff = --tabsize=4 -Nprc5
+
+[pager]
+# ref: http://mercurial.selenic.com/wiki/PagerExtension
+pager = LESS='FRX' less
+
