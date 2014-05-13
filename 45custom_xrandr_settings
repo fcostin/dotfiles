@@ -1,0 +1,17 @@
+# generalised from http://ubuntuforums.org/showthread.php?t=1243541
+EXTERNAL_OUTPUT_1="VGA-1-0"
+EXTERNAL_OUTPUT_2="HDMI-0"
+INTERNAL_OUTPUT="LVDS-1-0"
+
+# hack - wipe the background
+xsetroot -bg black
+
+xrandr |grep -E $EXTERNAL_OUTPUT_1 | grep " connected "
+if [ $? -eq 0 ]; then
+    xrandr --output $EXTERNAL_OUTPUT_1 --auto --output $EXTERNAL_OUTPUT_2 --off --output $INTERNAL_OUTPUT --off
+fi
+xrandr |grep -E $EXTERNAL_OUTPUT_2 | grep " connected "
+if [ $? -eq 0 ]; then
+    xrandr --output $EXTERNAL_OUTPUT_1 --off --output $EXTERNAL_OUTPUT_2 --auto --output $INTERNAL_OUTPUT --off
+fi
+
